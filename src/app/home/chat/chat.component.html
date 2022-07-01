@@ -1,0 +1,44 @@
+<main class="chat-wrapper">
+  <section class="message-container">
+    <ul class="message-box" #msgLists>
+      <li class="msg-item"><a href="#">heloo there</a></li>
+      <li class="msg-item"><a href="#">heloo there</a></li>
+      <li class="msg-item"><a href="#">heloo there</a></li>
+      <li class="msg-item"><a href="#">heloo there</a></li>
+      <li class="msg-item"><a href="#">heloo there</a></li>
+      <li class="msg-item"><a href="#">heloo there</a></li>
+      <li class="msg-item"><a href="#">heloo there</a></li>
+      <li class="msg-item"><a href="#">heloo there</a></li>
+      <li class="msg-item"><a href="#">heloo there</a></li>
+      <li class="msg-item"><a href="#">heloo there</a></li>
+      <li class="msg-item"><a href="#">heloo there</a></li>
+      <li class="msg-item"><a href="#">heloo there</a></li>
+      <li class="msg-item"><a href="#">heloo there</a></li>
+      <li class="msg-item"><a href="#">heloo there</a></li>
+    </ul>
+  </section>
+  <section class="chat-form">
+    <form [formGroup]="chatForm" (ngSubmit)="onSubmitPrivateChat()">
+      <div class="row">
+        <div class="col-md-10">
+          <input
+            type="text"
+            formControlName="message"
+            class="form-control"
+            placeholder="Message..."
+            aria-label="chat-message"
+          />
+        </div>
+        <div class="col-md-2">
+          <button
+            [disabled]="!chatForm.valid"
+            type="submit"
+            class="form-control btn btn-primary"
+          >
+            Chat
+          </button>
+        </div>
+      </div>
+    </form>
+  </section>
+</main>

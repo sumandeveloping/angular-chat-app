@@ -1,0 +1,30 @@
+<h1>This is home page</h1>
+
+<div class="app-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="sidebar">
+          <div class="sidebar--group"></div>
+          <div class="sidebar--private">
+            <h3>Private Chats</h3>
+            <div class="private-users">
+              <!-- list of users -->
+              <div
+                *ngFor="let user of userList; let i = index"
+                class="user-list"
+                [routerLink]="['/home/chat', user.id]"
+              >
+                <h4>{{ user.name }}</h4>
+                <p>status: online</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
