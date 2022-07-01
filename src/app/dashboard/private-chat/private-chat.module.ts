@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { PrivateChatRoutingModule } from './private-chat-routing.module';
 import { PrivateChatComponent } from './private-chat.component';
+import { ChatBodyComponent } from './chat-body/chat-body.component';
 
 
 @NgModule({
   declarations: [
-    PrivateChatComponent
+    PrivateChatComponent,
+    ChatBodyComponent
   ],
   imports: [
     CommonModule,

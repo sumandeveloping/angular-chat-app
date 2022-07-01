@@ -16,11 +16,11 @@
           </div>
         </form>
         <div class="pvt-users-list">
-          <a href="#" class="pvt-user-item user-selected">
+          <a [routerLink]="['./', '5']" class="pvt-user-item user-selected">
             <!-- user image goes here -->
             <p>User 1 <span class="badge bg-success">Online</span></p>
           </a>
-          <a href="#" class="pvt-user-item">
+          <a routerLink="./4" class="pvt-user-item">
             <!-- user image goes here -->
             <p>User 1 <span class="badge bg-success">Online</span></p>
           </a>
@@ -29,10 +29,11 @@
     </div>
     <!-- start of chat component -->
     <div class="col-md-7">
-      <div class="pvt-msg-container">
+      <router-outlet></router-outlet>
+      <!-- <div class="pvt-msg-container">
         <div class="pvt-msg-header">chat header</div>
         <div class="pvt-msg-area">chat body</div>
-      </div>
+      </div> -->
     </div>
     <!-- end of chat component -->
     <div class="col-md-2">

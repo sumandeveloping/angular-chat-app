@@ -6,7 +6,7 @@
 .pvt-user-item {
   text-decoration: none;
   border-bottom: 1px solid #dad6d6;
-  padding: 0.8rem 0.8rem;
+  padding: 1.2rem 0.8rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -15,11 +15,15 @@
     margin-bottom: 1rem;
   }
   &.user-selected {
-    background-color: #f6eafb;
+    background-color: #ececec;
   }
 
   p {
     color: #030303;
     font-size: 1.4rem;
+    margin: 0;
+    span {
+      margin-left: 1rem;
+    }
   }
 }
