@@ -16,6 +16,10 @@
     "lib": ["es2020", "dom"]
   },
   "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictTemplates": true,
+    "preserveWhitespaces": true,
+    "fullTemplateTypeCheck": true
   }
 }

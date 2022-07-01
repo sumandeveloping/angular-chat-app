@@ -4,12 +4,21 @@ import { ChatComponent } from './home/chat/chat.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
   {
-    path: 'home',
-    component: HomeComponent,
-    children: [{ path: 'chat/:id', component: ChatComponent }],
+    path: '',
+    redirectTo: '/dashboard',
+    pathMatch: 'full',
   },
+  {
+    path: 'dashboard',
+    loadChildren: () =>
+      import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
+  },
+  // {
+  //   path: 'home',
+  //   component: HomeComponent,
+  //   children: [{ path: 'chat/:id', component: ChatComponent }],
+  // },
 ];
 
 @NgModule({

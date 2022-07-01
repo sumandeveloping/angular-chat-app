@@ -1,0 +1,25 @@
+.pvt-users-list {
+  margin-top: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0rem 0.2rem 0rem rgba(0 0 0 / 20%);
+}
+.pvt-user-item {
+  text-decoration: none;
+  border-bottom: 1px solid #dad6d6;
+  padding: 0.8rem 0.8rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 0.1rem 0.2rem 0rem rgba(0, 0, 0, 0.2);
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  &.user-selected {
+    background-color: #f6eafb;
+  }
+
+  p {
+    color: #030303;
+    font-size: 1.4rem;
+  }
+}
