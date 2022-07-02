@@ -1,0 +1,71 @@
+<main class="login-body container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <form
+        [formGroup]="loginForm"
+        (ngSubmit)="onLoginSubmit()"
+        id="login-form"
+        class="mt-5"
+      >
+        <div class="mb-3">
+          <label for="exampleInputEmail" class="form-label">Email</label>
+          <input
+            formControlName="email"
+            type="email"
+            class="form-control"
+            id="exampleInputEmail"
+            aria-describedby="emailHelp"
+            required
+          />
+          <div
+            id="emailError"
+            class="form-text mt-3"
+            *ngIf="email.invalid && (email.touched || email.dirty)"
+          >
+            <p class="alert alert-danger" *ngIf="email.errors?.required">
+              Email is required.
+            </p>
+            <p class="alert alert-danger" *ngIf="email.errors?.email">
+              Please enter a valid email
+            </p>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword" class="form-label">Password</label>
+          <input
+            formControlName="password"
+            type="password"
+            class="form-control"
+            id="exampleInputPassword"
+            required
+          />
+          <div
+            id="passwordError"
+            class="form-text mt-3"
+            *ngIf="password.invalid && (password.touched || password.dirty)"
+          >
+            <p class="alert alert-danger" *ngIf="password.errors?.required">
+              Password is required.
+            </p>
+            <p class="alert alert-danger" *ngIf="password.errors?.minlength">
+              Password must be at least 6 characters long.
+            </p>
+          </div>
+        </div>
+        <!-- <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+          <label class="form-check-label" for="exampleCheck1"
+            >Check me out</label
+          >
+        </div> -->
+        <button
+          type="submit"
+          class="btn btn-primary"
+          [disabled]="!loginForm.valid"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</main>

@@ -16,7 +16,7 @@
 
   .pvt-msg-area {
     .pvt-msg-body {
-      height: 60vh;
+      height: 45vh;
       position: relative;
       overflow-y: auto;
       padding: 0.5rem;
@@ -25,6 +25,7 @@
       flex-direction: column;
       //   justify-content: flex-end; //this is vertical
       align-items: flex-start; //this is horizontal
+      box-shadow: 0 0 1rem rgb(0 0 0 / 20%);
     }
     .msg-box {
       display: block;
@@ -100,9 +101,44 @@
           );
         }
       }
+      // user connected & disconnected message
+      &.user-connected-msg,
+      &.user-disconnected-msg {
+        align-self: center;
+        .msg-box-content {
+          background: #dcdbdb;
+          p {
+            color: #212020;
+          }
+        }
+      }
     }
 
     .pvt-msg-form {
+      margin-top: 0.5rem;
+      box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+      #chat-form {
+        #msg_input {
+          padding: 0.8rem 0.5rem;
+          font-size: 1.4rem;
+        }
+        .btn-container {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          & > * {
+            flex: initial;
+          }
+          .btn-grp {
+            display: flex;
+            flex-direction: row;
+          }
+
+          .chat-send-btn {
+            margin: 0;
+          }
+        }
+      }
     }
   }
 }

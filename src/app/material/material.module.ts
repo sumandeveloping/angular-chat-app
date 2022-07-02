@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { MatButton, MatButtonModule } from '@angular/material/button';
-const MaterialComponents: any[] = [MatButtonModule];
+import { MatIconModule } from '@angular/material/icon';
+const MaterialComponents: any[] = [MatButtonModule, MatIconModule];
 
 @NgModule({
-  imports: [],
-  exports: [],
+  imports: [MaterialComponents],
+  exports: [MaterialComponents],
 })
 export class MaterialModule {}

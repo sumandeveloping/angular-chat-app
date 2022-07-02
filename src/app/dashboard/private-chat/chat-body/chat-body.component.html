@@ -17,7 +17,7 @@
           <p class="message-author">Old Message</p>
         </div>
       </div>
-      <div class="msg-box">
+      <div class="msg-box messageOwner">
         <!-- msg user & time -->
         <div class="msg-box-info">
           <p class="message-author">Suman <span>5.30 pm</span></p>
@@ -35,6 +35,20 @@
         <!-- msg text -->
         <div class="msg-box-content">
           <p>Message 3</p>
+        </div>
+      </div>
+      <!-- user connected msg -->
+      <div class="msg-box user-connected-msg">
+        <!-- msg text -->
+        <div class="msg-box-content">
+          <p>Suman joined the chat</p>
+        </div>
+      </div>
+      <!-- user DISconnected msg -->
+      <div class="msg-box user-disconnected-msg">
+        <!-- msg text -->
+        <div class="msg-box-content">
+          <p>Suman left the chat</p>
         </div>
       </div>
       <div class="msg-box messageOwner">
@@ -62,6 +76,54 @@
       </div>
     </div>
     <!-- msg input -->
-    <div class="pvt-msg-form"></div>
+    <div class="pvt-msg-form">
+      <form id="chat-form" class="row">
+        <div class="col-8">
+          <input
+            type="text"
+            class="form-control"
+            id="msg_input"
+            placeholder="Type here..."
+          />
+        </div>
+        <div class="col-4">
+          <!-- emoji & file btn -->
+          <div class="btn-container">
+            <div class="btn-grp">
+              <button
+                type="button"
+                mat-mini-fab
+                class="emoji-btn"
+                color="accent"
+                aria-label="Example icon button with a emoji icon"
+              >
+                <mat-icon>mood</mat-icon>
+              </button>
+              <button
+                type="button"
+                mat-mini-fab
+                class="attachFile-btn"
+                color="accent"
+                aria-label="Example icon button with a file icon"
+              >
+                <mat-icon>attach_file</mat-icon>
+              </button>
+            </div>
+            <!-- send button -->
+            <!-- <button type="submit" class="btn btn-primary chat-send-btn">
+              Send
+            </button> -->
+            <button
+              type="submit"
+              mat-mini-fab
+              color="accent"
+              aria-label="Example icon button with a bookmark icon"
+            >
+              <mat-icon>send</mat-icon>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
 </div>

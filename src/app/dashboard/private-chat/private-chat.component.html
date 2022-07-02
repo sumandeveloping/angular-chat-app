@@ -7,7 +7,7 @@
           <div class="input-group">
             <input
               type="text"
-              class="form-control"
+              class="form-control search-user-input"
               placeholder="Search your buddy..."
               aria-label="search user"
               aria-describedby="basic-addon2"
@@ -16,13 +16,16 @@
           </div>
         </form>
         <div class="pvt-users-list">
-          <a [routerLink]="['./', '5']" class="pvt-user-item user-selected">
+          <a
+            *ngFor="let user of userList"
+            [routerLink]="['./', user.id]"
+            class="pvt-user-item"
+            routerLinkActive="user-selected"
+          >
             <!-- user image goes here -->
-            <p>User 1 <span class="badge bg-success">Online</span></p>
-          </a>
-          <a routerLink="./4" class="pvt-user-item">
-            <!-- user image goes here -->
-            <p>User 1 <span class="badge bg-success">Online</span></p>
+            <p>
+              {{ user.username }} <span class="badge bg-success">Online</span>
+            </p>
           </a>
         </div>
       </div>
